@@ -1,0 +1,39 @@
+/* Joke CSS */
+.jokeContainer {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 20px auto;
+  
+}
+
+.joke {
+  position: relative;
+  background-color: #ff65a3;
+  padding: 30px; 
+
+   width: 500px;
+   margin: 0 auto;
+   position: relative;
+}
+
+.joke::before {
+   content: "";
+   width: 0;
+   height: 0;
+   position: absolute;
+   bottom: 5px;
+   right: -1px;
+   border-width: 0;
+   border-style: solid;
+   border-color: green #fff transparent transparent;
+   transition: border-width 0.5s ease-out;
+}
+
+.joke:hover {
+  &.joke::before {
+    border-width: 480px 480px 0 0;
+  }
+}
+
+
