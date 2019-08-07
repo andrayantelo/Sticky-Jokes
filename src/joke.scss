@@ -22,7 +22,6 @@
   background-color: #ff65a3;
   position: absolute;
   right: 0px;
-  top: 0px;
   bottom: 0px;
 }
 .corner::before {
@@ -33,10 +32,11 @@
   width: 0px;
   height: 0px;
   border-bottom: 50px solid white;
-  border-left:50px solid transparent;
+  border-left: 50px solid transparent;
   -webkit-box-shadow: -7px -7px 7px rgba(0,0,0,0.3);
   -moz-box-shadow: -7px -7px 7px rgba(0,0,0,0.3);
   box-shadow: -7px -7px 7px rgba(0,0,0,0.3);
+  transition: border-width 1s, right 1s;
 }
 
 .corner::after {
@@ -48,7 +48,20 @@
   height: 0px;
   border-top: 49px solid #eee;
   border-right: 49px solid transparent;
+  transition: border-width 1s;
 }
+
+.corner:hover::before{
+  border-bottom: 160px solid white;
+  border-left: 160px solid transparent;
+  right: 100%
+}
+
+.corner:hover::after {
+  border-top: 159px solid #eee;
+  border-right: 159px solid transparent;
+}
+
 
 
 
